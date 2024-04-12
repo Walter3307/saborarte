@@ -103,6 +103,10 @@ nav li a:hover{
     height: 100vh;
 }
 
+.body.acercade{
+    height: 100vh;
+}
+
 span{
     font-weight: 550;
 }
