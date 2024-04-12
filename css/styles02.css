@@ -1,0 +1,298 @@
+:root{
+    font-size: 18px;
+    --primary-100:#8FBF9F;
+    --primary-200:#68a67d;
+    --primary-300:#24613b;
+    --accent-100:#F18F01;
+    --accent-200:#833500;
+    --text-100:#353535;
+    --text-200:#5f5f5f;
+    --bg-100:#F5ECD7;
+    --bg-200:#ebe2cd;
+    --bg-300:#c2baa6;
+      
+}
+
+::selection{
+    background-color: var(--text-200);
+}
+
+body{
+    background-color: var(--bg-100);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    min-height: 100vh;
+    font-size: 1rem;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    display: grid;
+    .header{
+        grid-area: header;
+    }
+    .body{
+        grid-area: body;
+    }
+    .footer{
+        grid-area: footer;
+    }
+    grid-template: 
+    "header" 1fr
+    "body" auto
+    "footer" 0.1fr
+    ;
+
+}
+
+/* header y titulo */
+
+header{
+    background-color: var(--primary-100);
+    box-shadow: 0.5px 1px 5px var(--primary-200);
+    display: flex;
+    flex-flow: column-reverse wrap;
+    padding: 20px;
+}
+
+h1{
+    font-size: 2.5rem;
+    color: var(--text-100);
+    text-shadow: 0.2px 0.3px 1px var(--text-200);
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* menu */
+
+nav ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li a{
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: var(--text-100);
+    border-radius: 2px;
+    color: var(--text-100);
+    display: flex;
+    justify-content: center;
+    align-content: start;
+}
+
+nav li a:hover{
+    background-color: var(--primary-200);
+}
+
+/* contenido */
+
+.body{
+    color: var(--text-100);
+    background-color: var(--bg-100);
+}
+
+.body.contacto{
+    height: 100vh;
+}
+
+span{
+    font-weight: 550;
+}
+
+article{
+    margin-top: 30px;
+}
+
+article>*{
+    margin: 15px 15px 15px 8px;
+}
+
+img{
+    max-width: 500px;
+    border-radius: 10px;
+}
+
+#receta{
+    text-align: left;
+}
+
+#ingredientes th, td{
+    padding: 3px;
+}
+
+#info{
+    list-style-type: square;
+    padding: 0;
+    margin: 0;
+}
+
+#info li{
+    padding: 3px;
+    margin: 5px 5px 10px 35px;
+}
+
+.mail a{
+    text-decoration: underline;
+    color: var(--text-100);
+}
+
+.mail a:hover{
+    color: var(--text-200);
+}
+
+/* formulario de registro */
+
+form h2{
+    margin: 25px 0px 30px 0px;
+}
+
+form{
+    max-width: 600px;
+    padding: 10px 20px;
+    margin: 15px auto;
+    border-radius: 15px;
+}
+
+label{
+    display: block;
+}
+
+.labelapart{
+    display: inline;
+    margin-right: 8px;
+}
+
+input[type="text"], input[type="date"]{
+    border: none;
+    padding: 10px;
+    margin: 0;
+    font-size: 15px;
+    outline: 0;
+    height: auto;
+    width: 100%;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+    margin-bottom: 25px;
+    margin-top: 8px;
+    border-radius: 5px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin: 8px 0 30px 0;
+  border-radius: 5px;
+}
+
+.enviar{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.enviar li{
+    margin: 15px 0px 0px 0px;
+}
+
+.enviar li a{
+    text-decoration: none;
+    display: block;
+    color: var(--text-100);
+    width: 100%;
+    padding: 10px;
+    font-size: 1.5rem;
+    color: var(--text-100);
+    background-color: var(--primary-200);
+    border: 1px solid var(--primary-200);
+    box-shadow: 0 -1px 0 var(--primary-200) inset;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px¿;
+    text-align: center;
+}
+
+.enviar li a:hover{
+    background-color: var(--primary-100);
+}
+
+/* sucursales */
+
+.direcciones>*{
+    min-width: 70%;
+}
+
+.direcciones a{
+    color: var(--text-100);
+}
+
+.direcciones a:hover{
+    color: var(--text-200);
+}
+
+.direcciones iframe{
+    border-radius: 5px;
+}
+
+/* redes y pie de pagina */
+
+footer{
+    background: rgb(143,191,159);
+    background: linear-gradient(0deg, rgba(143,191,159,1) 70%, rgba(245,236,215,1) 100%);
+    padding: 10px;
+    color: var(--text-100);
+    text-align: center;
+}
+
+.redes{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    place-content: center center;
+}
+
+.redes li a{
+    text-decoration: none;
+    padding: 5px;
+    margin-right: 8px;
+    display: block;
+    font-size: 22px;
+    color: var(--text-100);
+}
+
+.redes li a:hover{
+    color: var(--primary-300);
+}
+
+/* mediaqueries */
+
+@media only screen and (min-width: 992px){
+    form{
+        border: 1px solid var(--bg-300);
+    }
+
+    header{
+        padding: 0;
+        display: flex;
+        flex-flow: column wrap;
+    }
+
+    h1{
+        padding: 20px;
+    }
+
+    nav ul{
+        display: flex;
+        flex-flow: row wrap;
+    }
+
+    nav li a{
+        border-right: 1px solid var(--bg-200);
+    }
+}
